@@ -1,0 +1,14 @@
+{
+  "name": "processor_A",
+  "status": "PLACEHOLDER - our own design, no official file exists (organizers: design/simulate A and B yourself)",
+  "num_qubits": 5,
+  "coupling_map": [[0,1],[1,2],[1,3],[3,4]],
+  "basis_gates": ["rz","sx","x","cx"],
+  "noise": {
+    "type": "synthetic_placeholder",
+    "one_qubit_gate_error": 0.001,
+    "two_qubit_gate_error": 0.01,
+    "readout_error": 0.02
+  },
+  "notes": "5-qubit T-shaped fixed baseline graph. Edges are undirected; loader adds both directions."
+}
