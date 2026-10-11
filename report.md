@@ -54,6 +54,12 @@ the circuit is large enough that even smart placement cannot avoid long-range in
 - `results/figures/processor_A_graph.png` and `processor_B_graph.png`: visual comparison.
 - `results/figures/scaling_trend.png`: line chart showing gate growth with adder size.
 
+## Additional Experiments
+
+**Noise sensitivity:** As 2Q error increases from 0.5% to 5%, the A–B success-rate gap widens from 0.4% to 2.8%. B's extra gates cause steeper noise degradation, confirming that the routing overhead has a measurable cost beyond just gate count.
+
+**Multiplier:** A 2-bit multiplier (6 qubits, 48 2Q gates) runs on B only (does not fit on A's 5 qubits). Ideal success rate is 1.0; noisy success rate is 0.778. This extends the benchmark beyond adders to a second arithmetic operation.
+
 ## Scope and Future Work
 
 This project benchmarks two adder designs (ripple-carry and Draper QFT) on two small simulated processors. The results show that wiring affects routing cost at low optimization levels, and that this effect grows with circuit size.

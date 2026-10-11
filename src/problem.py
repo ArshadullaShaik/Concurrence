@@ -91,3 +91,25 @@ def three_bit_adder(a, b):
 
 def expected_three_bit(a, b):
     return format((a + b) % 8, "03b")
+
+
+def two_bit_multiplier(a, b):
+    """Multiplies two 2-bit numbers, answer mod 4. 6 qubits.
+    Qubits: 0=a0, 1=a1, 2=b0, 3=b1, 4=p0, 5=p1. Result is left in p (p1 p0).
+    For mod 4: p0 = a0*b0, p1 = (a0*b1) XOR (a1*b0). The a1*b1 term is dropped."""
+    qc = QuantumCircuit(6, 2)
+    if a & 1: qc.x(0)
+    if a & 2: qc.x(1)
+    if b & 1: qc.x(2)
+    if b & 2: qc.x(3)
+    # Partial products for mod 4 result
+    qc.ccx(0, 2, 4)   # p0 = a0 AND b0
+    qc.ccx(0, 3, 5)   # p1 = a0 AND b1
+    qc.ccx(1, 2, 5)   # p1 ^= a1 AND b0 (XOR via consecutive Toffolis on same target)
+    qc.measure(4, 0)
+    qc.measure(5, 1)
+    return qc
+
+
+def expected_mult(a, b):
+    return format((a * b) % 4, "02b")

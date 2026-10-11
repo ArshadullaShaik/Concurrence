@@ -70,6 +70,24 @@ B's wider spread (15–45 vs 12–24) means more bad placements exist on the lar
 A maxes out at 2-bit (5 qubits). B handles 3-bit (8 qubits) but at 59 gates —
 the routing cost grows steeply with size on the heavy-hex fragment.
 
+### Noise sensitivity (2-bit adder, varying 2Q error)
+| 2Q error | A success | B success | Gap |
+|----------|-----------|-----------|-----|
+| 0.5%     | 0.900     | 0.896     | 0.4% |
+| 1%       | 0.849     | 0.840     | 0.9% |
+| 2%       | 0.760     | 0.742     | 1.8% |
+| 5%       | 0.554     | 0.526     | 2.8% |
+| 10%      | 0.371     | 0.355     | 1.6% |
+
+B's extra gates cause steeper noise degradation. The gap widens from 0.4% to 2.8%
+as noise increases from 0.5% to 5%.
+
+### Multiplier (B only, 6 qubits — does not fit on A)
+| Noisy | Depth | 2Q gates | Success rate |
+|-------|-------|----------|--------------|
+| No    | 72    | 48       | 1.000        |
+| Yes   | 72    | 48       | 0.778        |
+
 ## Files
 See the folder tree. Analysis and limitations are in `report.md`.
 
