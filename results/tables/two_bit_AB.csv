@@ -1,0 +1,5 @@
+processor,noisy,depth,two_qubit_gates,success_rate
+A,False,28,21,1.0
+A,True,28,21,0.84906005859375
+B,False,31,24,1.0
+B,True,31,24,0.839691162109375

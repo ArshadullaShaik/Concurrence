@@ -1,0 +1,6 @@
+processor,adder_size,qubits,two_qubit_gates,depth
+A,1-bit,4,17,29
+B,1-bit,4,17,29
+A,2-bit,5,21,28
+B,2-bit,5,24,31
+B,3-bit,8,59,57

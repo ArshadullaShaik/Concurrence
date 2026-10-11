@@ -1,0 +1,9 @@
+design,opt_level,processor,2q_mean,2q_sd,depth_mean,noisy_success
+ripple,0,A,21.2,0.8,29.0,0.849
+ripple,0,B,24.4,1.0,31.9,0.84
+ripple,1,A,10.0,0.0,20.0,0.903
+ripple,1,B,10.0,0.0,19.2,0.903
+draper,0,A,23.1,1.5,45.5,0.83
+draper,0,B,23.1,1.5,45.5,0.83
+draper,1,A,19.0,0.0,37.6,0.847
+draper,1,B,19.0,0.0,37.1,0.845

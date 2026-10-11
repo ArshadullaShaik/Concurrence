@@ -1,8 +1,17 @@
+# Virtual environment
 .venv/
 venv/
+
+# Python cache
 __pycache__/
-*.__pycache__
-.iypnb_checkpoints/
+*.pyc
+
+# Notebook autosaves
+.ipynb_checkpoints/
+
+# Mac system files
 .DS_Store
+
+# Editor settings
 .vscode/
 .idea/
